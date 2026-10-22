@@ -19,7 +19,7 @@ jobs:
 
       - name: Extract V7.3 project
         run: |
-          unzip -q Hollowhaven_Remnant_ANDROID_V7_3_WEB_RAMUS_READY.zip -d build-project
+          unzip -q Hollowhaven_Remnant_ANDROID_V7_4_SPRITE_FIX_READY -d build-project
           cp -a build-project/. .
           rm -rf build-project
           test -f settings.gradle
