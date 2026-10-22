@@ -46,11 +46,13 @@ jobs:
         run: python3 -m pip install --user Pillow
       - name: Run Hollowhaven QA
         run: python3 tools/qa_project.py
- 
-      - name: Fix Locale import
+
+      - name: Fix Locale reference
         run: |
-          sed -i 's/Locale\.ROOT/java.util.Locale.ROOT/g' app/src/main/java/com/hollowhaven
-           /remnant/RemnantOverlayService.java
+             sed -i 's/Locale\.ROOT/java.util.Locale.ROOT/g' "app/src/main/java/com/hollowhaven/remnant/RemnantOverlayService.java"
+             grep -n "java.util.Locale.ROOT" "app/src/main/java/com/hollowhaven/remnant/RemnantOverlayService.java"
+        
+          
     
       - name: Build debug APK
         run: gradle --no-daemon --stacktrace :app:assembleDebug
