@@ -41,8 +41,9 @@ jobs:
         uses: gradle/actions/setup-gradle@v6
         with:
           gradle-version: '8.13'
-- name: Install QA dependency
-  run: python3 -m pip install --user Pillow
+
+      - name: Install QA dependency
+        run: python3 -m pip install --user Pillow
       - name: Run Hollowhaven QA
         run: python3 tools/qa_project.py
 
