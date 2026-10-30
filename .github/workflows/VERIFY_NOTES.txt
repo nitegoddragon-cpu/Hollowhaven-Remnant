@@ -1,0 +1,12 @@
+Verified locally:
+- Java source brace/parenthesis counts are balanced for AiVideoWorkerClient, MainActivity, and RemnantOverlayService.
+- Android source contains no wavespeed:// direct-key route after patching.
+- MainActivity defaults to the secure Railway bridge URL.
+- Android HTML text now states the WaveSpeed key stays server-side.
+- Railway production deployment a52fbbcf-6760-43ba-befc-39203d57066e is SUCCESS and service is online.
+- WAVESPEED_API_KEY is present on the Railway service (value redacted).
+Not verified here:
+- Actual POST /api/generate to the public Railway endpoint.
+- Actual WaveSpeed Wan 2.2 Animate 2 completion.
+- Fresh APK build/install from this patch.
+Reason: this execution environment has no DNS/network route to the public Railway hostname, and the Opera browser connector is not connected.
