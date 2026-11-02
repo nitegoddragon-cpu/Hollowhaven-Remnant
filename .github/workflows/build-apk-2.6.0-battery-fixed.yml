@@ -17,14 +17,10 @@ jobs:
       - name: Download repository
         uses: actions/checkout@v4
 
-      - name: Extract V7.4 sprite-fix project
+      - name: Extract V7.5 Pet Library project
         run: |
-          unzip -q Hollowhaven_Remnant_ANDROID_V7_4_SPRITE_FIX_READY_FIXED.zip -d build-project
-          cp -a build-project/v74project/. .
-          rm -rf build-project
-          test -f settings.gradle
-          test -f app/build.gradle
-          test -f app/src/main/AndroidManifest.xml
+         unzip -q Hollowhaven_V7.5_PetLibrary_build_handoff.zip -d build-project
+         cp -a build-project/. .
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
