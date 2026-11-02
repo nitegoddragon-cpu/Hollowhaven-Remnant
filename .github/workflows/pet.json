@@ -1,0 +1,9 @@
+{
+  "id": "forest_spirit",
+  "name": "Forest Spirit",
+  "source_frames": 57,
+  "action": "idle",
+  "format": "PNG",
+  "frame_dimensions": "192x192",
+  "validated": true
+}
